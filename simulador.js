@@ -22,11 +22,13 @@ calcularEnvio () {
 }
 
 calcularDescuento () {
-    return 15 * this.subTotal / 100;
+    this.descuento = 15 * this.subTotal / 100;
+    return this.descuento;
     }
 
 calcularTotal () {
     this.total = parseFloat(this.subTotal + this.envio - this.descuento);
+    return this.total;
     }
 }
 
