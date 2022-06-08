@@ -1,0 +1,94 @@
+class Pedido {
+    constructor (producto, precio, cantidad) {
+        this.producto = producto,
+        this.precio = precio,
+        this.cantidad = cantidad,
+        this.envio = 0,
+        this.subTotal = 0,
+        this.descuento = 0,
+        this.total =0
+    }
+
+calcularSubTotal() {
+    this.subTotal = this.precio * this.cantidad;
+}
+
+calcularEnvio () {
+    if (this.cantidad >= 2) {
+        this.envio = 0;
+    } else {
+        this.envio = 380;
+    }
+}
+
+calcularDescuento () {
+    return 15 * this.subTotal / 100;
+    }
+
+calcularTotal () {
+    this.total = parseFloat(this.subTotal + this.envio - this.descuento);
+    }
+}
+
+// FUNCIÓN PARA HACER UN PEDIDO
+const pedidoProducto = () => {
+    let producto = 0;
+    let cantidadProducto = 0;
+    let precio = 0;
+
+while (producto == 0 || producto > 5 || !producto) {
+    producto = parseInt ( prompt ("¿Qué libro de Jorge Luis Borges quieres comprar?: 1) El Aleph $2149 2) Ficciones $2149 3) Historia universal de la infamia $1449 4) El informe de Brodie $1449 5) Cuentos completos $2699"));
+}
+
+switch (producto) {
+    case 1:
+        producto = "El aleph";
+        precio = 2149;
+        break;
+
+    case 2:
+        producto = "Ficciones";
+        precio = 2149;
+        break;
+
+    case 3:
+        producto = "Historia universal de la infamia";
+        precio = 1449;
+        break;
+
+    case 4:
+        producto = "El informe de Brodie";
+        precio = 1449;
+        break;
+
+    case 5:
+        producto = "Cuentos completos";
+        precio = 2699;
+        break;
+}
+
+while (cantidadProducto == 0 || !cantidadProducto) {
+    cantidadProducto = parseInt (prompt ("Elegiste el título: "+ producto + "¿Cuántos ejemplares quieres?"));
+}
+
+const compra = new Pedido (producto, precio, cantidadProducto);
+
+return compra;
+
+};
+
+alert ("Bienvenid@ a la librería");
+
+const pedido = pedidoProducto ();
+
+pedido.calcularSubTotal();
+pedido.calcularEnvio();
+pedido.calcularDescuento()
+pedido.calcularTotal();
+
+console.log ("Detalle del pedido:\n\n"+
+    "- "+pedido.producto+ " x " +pedido.cantidad+ ": $"+pedido.precio * pedido.cantidad +"\n" +
+    "- Descuento 15%:  $" +pedido.calcularDescuento()+  "\n" +
+    "- Costo de envío: $"+pedido.envio+ "\n\n" +
+    "Total = $" +pedido.total
+);
