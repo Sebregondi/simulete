@@ -3,9 +3,9 @@ class Pedido {
         this.producto = producto,
         this.precio = precio,
         this.cantidad = cantidad,
+        this.descuento = 0,
         this.envio = 0,
         this.subTotal = 0,
-        this.descuento = 0,
         this.total =0
     }
 
