@@ -8,104 +8,121 @@ const catalogo = [
     {id: 6, titulo: 'La cifra', precio: 2049, genero: "poesia"},
 ]
 
+// Filtrar por género
 const filtrarEnsayos = catalogo.filter ( (elemento) => elemento.genero.includes ("ensayo") );
 console.log (filtrarEnsayos);
 
+// Ordenar precios de menor a mayor
+catalogo.sort ( (a, b) => {
+    if (a.precio > b.precio) {
+        return 1;
+    }
+    if (a.precio < b.precio) {
+        return -1;
+    }
+    return 0;
+})
+console.log (catalogo);
 
-// // FUNCIÓN CONSTRUCTORA PARA REALIZAR PEDIDO
-// class Pedido {
-//     constructor (producto, precio, cantidad) {
-//         this.producto = producto,
-//         this.precio = precio,
-//         this.cantidad = cantidad,
-//         this.descuento = 0,
-//         this.envio = 0,
-//         this.subTotal = 0,
-//         this.total =0
-//     }
 
-// calcularSubTotal() {
-//     this.subTotal = this.precio * this.cantidad;
-// }
+// FUNCIÓN CONSTRUCTORA PARA REALIZAR PEDIDO
+class Pedido {
+    constructor (producto, precio, cantidad) {
+        this.producto = producto,
+        this.precio = precio,
+        this.cantidad = cantidad,
+        this.descuento = 0,
+        this.envio = 0,
+        this.subTotal = 0,
+        this.total =0
+    }
 
-// calcularEnvio () {
-//     if (this.cantidad >= 2) {
-//         this.envio = 0;
-//     } else {
-//         this.envio = 380;
-//     }
-// }
+calcularSubTotal() {
+    this.subTotal = this.precio * this.cantidad;
+}
 
-// calcularDescuento () {
-//     this.descuento = 15 * this.subTotal / 100;
-//     return this.descuento;
-//     }
+calcularEnvio () {
+    if (this.cantidad >= 2) {
+        this.envio = 0;
+    } else {
+        this.envio = 380;
+    }
+}
 
-// calcularTotal () {
-//     this.total = parseFloat(this.subTotal + this.envio - this.descuento);
-//     return this.total;
-//     }
-// }
+calcularDescuento () {
+    this.descuento = 15 * this.subTotal / 100;
+    return this.descuento;
+    }
 
-// // FUNCIÓN PARA HACER UN PEDIDO
-// const pedidoProducto = () => {
-//     let producto = 0;
-//     let cantidadProducto = 0;
-//     let precio = 0;
+calcularTotal () {
+    this.total = parseFloat(this.subTotal + this.envio - this.descuento);
+    return this.total;
+    }
+}
 
-// while (producto == 0 || producto > 5 || !producto) {
-//     producto = parseInt ( prompt ("¿Qué libro de Jorge Luis Borges quieres comprar?: 1) El Aleph $2149 2) Ficciones $2149 3) Historia universal de la infamia $1449 4) El informe de Brodie $1449 5) Cuentos completos $2699"));
-// }
+// FUNCIÓN PARA HACER UN PEDIDO
+const pedidoProducto = () => {
+    let producto = 0;
+    let cantidadProducto = 0;
+    let precio = 0;
 
-// switch (producto) {
-//     case 1:
-//         producto = "El aleph";
-//         precio = 2149;
-//         break;
+while (producto == 0 || producto > 6 || !producto) {
+    producto = parseInt ( prompt ("¿Qué libro de Jorge Luis Borges quieres comprar?: 1) El Aleph $3099 2) Ficciones $3099 3) Inquisiciones-Otras inquisiciones $3799 4) La rosa profunda $2049 5) Historia de la eternidad $2049 6) La cifra $2049"));
+}
 
-//     case 2:
-//         producto = "Ficciones";
-//         precio = 2149;
-//         break;
+switch (producto) {
+    case 1:
+        producto = "El aleph";
+        precio = 3099;
+        break;
 
-//     case 3:
-//         producto = "Historia universal de la infamia";
-//         precio = 1449;
-//         break;
+    case 2:
+        producto = "Ficciones";
+        precio = 3099;
+        break;
 
-//     case 4:
-//         producto = "El informe de Brodie";
-//         precio = 1449;
-//         break;
+    case 3:
+        producto = "Inquisiciones-Otras inquisiciones";
+        precio = 3799;
+        break;
 
-//     case 5:
-//         producto = "Cuentos completos";
-//         precio = 2699;
-//         break;
-// }
+    case 4:
+        producto = "La rosa profunda";
+        precio = 2049;
+        break;
 
-// while (cantidadProducto == 0 || !cantidadProducto) {
-//     cantidadProducto = parseInt (prompt ("Elegiste el título: "+ producto + "¿Cuántos ejemplares quieres?"));
-// }
+    case 5:
+        producto = "Historia de la eternidad";
+        precio = 2049;
+        break;
 
-// const compra = new Pedido (producto, precio, cantidadProducto);
+    case 6:
+        producto = "La cifra";
+        precio = 2049;
+        break;
+    }
 
-// return compra;
+while (cantidadProducto == 0 || !cantidadProducto) {
+    cantidadProducto = parseInt (prompt ("Elegiste el título: "+ producto + "¿Cuántos ejemplares quieres?"));
+}
 
-// };
+const compra = new Pedido (producto, precio, cantidadProducto);
 
-// alert ("Bienvenid@ a la librería");
+return compra;
+}; // FIN DE LA FUNCIÓN pedidoProducto
 
-// const pedido = pedidoProducto ();
+alert ("Bienvenid@ a la librería");
 
-// pedido.calcularSubTotal();
-// pedido.calcularEnvio();
-// pedido.calcularDescuento()
-// pedido.calcularTotal();
+const pedido = pedidoProducto ();
 
-// alert ("Detalle del pedido:\n\n"+
-//     "- "+pedido.producto+ " x " +pedido.cantidad+ ": $"+pedido.precio * pedido.cantidad +"\n" +
-//     "- Descuento 15%:  $" +pedido.calcularDescuento()+  "\n" +
-//     "- Costo de envío: $"+pedido.envio+ "\n\n" +
-//     "Total = $" +pedido.total
-// );
+pedido.calcularSubTotal();
+pedido.calcularEnvio();
+pedido.calcularDescuento()
+pedido.calcularTotal();
+
+alert ("Detalle del pedido:\n\n"+
+    "- "+pedido.producto+ " x " +pedido.cantidad+ ": $"+pedido.precio * pedido.cantidad +"\n" +
+    "- Descuento 15%:  $" +pedido.calcularDescuento()+  "\n" +
+    "- Costo de envío: $"+pedido.envio+ "\n\n" +
+    "Total = $" +pedido.total
+);
