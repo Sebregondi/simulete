@@ -1,5 +1,5 @@
 // ARRAY DE OBJETOS
-const catálogo = [
+const catalogo = [
     {titulo: 'El aleph', precio: 3099, genero: cuentos},
     {titulo: 'Ficciones', precio: 3099, genero: cuentos},
     {titulo: 'Inquisiciones-Otras inquisiciones', precio: 3799, genero: ensayo},
