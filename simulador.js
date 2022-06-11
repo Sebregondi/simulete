@@ -1,3 +1,14 @@
+// ARRAY DE OBJETOS
+const catálogo = [
+    {titulo: 'El aleph', precio: 3099, genero: cuentos},
+    {titulo: 'Ficciones', precio: 3099, genero: cuentos},
+    {titulo: 'Inquisiciones-Otras inquisiciones', precio: 3799, genero: ensayo},
+    {titulo: 'La rosa profunda', precio: 2049, genero: poesia},
+    {titulo: 'Historia de la eternidad', precio: 2049, genero: ensayo},
+    {titulo: 'La cifra', precio: 2049, genero: poesia},
+]
+
+// FUNCIÓN CONSTRUCTORA PARA REALIZAR PEDIDO
 class Pedido {
     constructor (producto, precio, cantidad) {
         this.producto = producto,
@@ -88,7 +99,7 @@ pedido.calcularEnvio();
 pedido.calcularDescuento()
 pedido.calcularTotal();
 
-console.log ("Detalle del pedido:\n\n"+
+alert ("Detalle del pedido:\n\n"+
     "- "+pedido.producto+ " x " +pedido.cantidad+ ": $"+pedido.precio * pedido.cantidad +"\n" +
     "- Descuento 15%:  $" +pedido.calcularDescuento()+  "\n" +
     "- Costo de envío: $"+pedido.envio+ "\n\n" +
