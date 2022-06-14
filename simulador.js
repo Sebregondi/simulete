@@ -12,6 +12,13 @@ const catalogo = [
 const filtrarEnsayos = catalogo.filter ( (elemento) => elemento.genero.includes ("ensayo") );
 console.log (filtrarEnsayos);
 
+const filtrarCuentos = catalogo.filter ( (elemento) => elemento.genero.includes ("cuentos") );
+console.log (filtrarCuentos);
+
+const filtrarPoesia = catalogo.filter ( (elemento) => elemento.genero.includes ("poesia") );
+console.log (filtrarPoesia);
+
+
 // Ordenar precios de menor a mayor
 catalogo.sort ( (a, b) => {
     if (a.precio > b.precio) {
