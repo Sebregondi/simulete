@@ -120,9 +120,11 @@ pedido.calcularEnvio();
 pedido.calcularDescuento()
 pedido.calcularTotal();
 
-alert ("Detalle del pedido:\n\n"+
-    "- "+pedido.producto+ " x " +pedido.cantidad+ ": $"+pedido.precio * pedido.cantidad +"\n" +
-    "- Descuento 15%:  $" +pedido.calcularDescuento()+  "\n" +
-    "- Costo de envío: $"+pedido.envio+ "\n\n" +
-    "Total = $" +pedido.total
-);
+alert (`Detalle del pedido:
+
+    ${pedido.producto} x ${pedido.cantidad} : $${pedido.precio * pedido.cantidad}
+    Descuento 15%: $${pedido.calcularDescuento()}
+    Costo de envío: $${pedido.envio}
+
+    Total = $${pedido.total}
+    `);
