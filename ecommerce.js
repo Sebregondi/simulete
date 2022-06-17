@@ -210,7 +210,7 @@ const obtenerTotal = (total, cuotas, intereses) => {
     alert ("El total a pagar es $" + total + " en "+ cuotas +" cuotas de $" + Math.ceil (valorCuota));
 }
 
-// LLAMADO A LAS FUNCIONE
+// LLAMADO A LAS FUNCIONES
 const comprarProductos = () => {
     if (confirm ("¿Quiere ordenar la lista de productos por precio en orden ascendente?")) {
         deMenoraMayor();
