@@ -22,16 +22,31 @@ arrayCatalogo.push (new Libro ("Inquisiciones/Otras inquisiciones", 3799, "ensay
 arrayCatalogo.push (new Libro ("Historia de la eternidad", 2049, "cuentos", 11));
 arrayCatalogo.push (new Libro ("La rosa profunda", 1999, "poesia", 11));
 arrayCatalogo.push (new Libro ("La cifra", 1399, "poesia", 11));
-console.log (arrayCatalogo);
+// console.log (arrayCatalogo);
 
 // Intento de crear elementos desde objetos
+// let container = document.getElementsByClassName ("list-group catalogo")
+
 for (const producto of arrayCatalogo) {
-    let contenedor = document.createElement ("div");
-    contenedor.innerHTML = `<h5> Título: ${producto.titulo}</h5>
-    <p> Género: ${producto.genero}</p>
-    <b> $${producto.precio}</b>`;
+    let contenedor = document.createElement ("ul");
+    contenedor.setAttribute("class", "list-group catalogo");
+    contenedor.innerHTML = `<li class="list-group-item">${producto.titulo}</li>
+    <li class="list-group-item">${producto.genero}</li>
+    <li class="list-group-item">${producto.precio}</li>`
     document.body.appendChild (contenedor);
 }
+
+// Intento de insertar nuevos elementos li en ul
+// let padre = document.getElementsByClassName("list-group catalogo");
+
+// let productos = arrayCatalogo;
+// for (const producto of productos) {
+//     let li = document.createElement("li");
+//     li.innerHTML = producto
+//     padre.appendChild (li);
+// }
+
+
 
 
 
