@@ -24,20 +24,15 @@ arrayCatalogo.push (new Libro ("La rosa profunda", 1999, "poesia", 11));
 arrayCatalogo.push (new Libro ("La cifra", 1399, "poesia", 11));
 // console.log (arrayCatalogo);
 
-// Intento de crear elementos desde objetos
 
+// CREACIÓN DE ELEMENTOS DE DOM A PARTIR DE ARRAY DE OBJETOS
 for (const producto of arrayCatalogo) {
-    let contenedor = document.createElement ("ul");
-    contenedor.setAttribute("class", "list-group catalogo");
-    contenedor.innerHTML = `<li class="list-group-item">${producto.titulo}</li>
-    <li class="list-group-item">${producto.genero}</li>
-    <li class="list-group-item">${producto.precio}</li>`
+    let contenedor = document.createElement ("div");
+    contenedor.innerHTML = `<h5> Título: ${producto.titulo}</h5>
+    <p> Género: ${producto.genero}</p>
+    <b> $${producto.precio}</b>`;
     document.body.appendChild (contenedor);
 }
-
-
-
-
 
 // FUNCIONES PARA ORDENAR
 // Ordenar precios de Menor a Mayor
