@@ -25,7 +25,6 @@ arrayCatalogo.push (new Libro ("La cifra", 1399, "poesia", 11));
 // console.log (arrayCatalogo);
 
 // Intento de crear elementos desde objetos
-// let container = document.getElementsByClassName ("list-group catalogo")
 
 for (const producto of arrayCatalogo) {
     let contenedor = document.createElement ("ul");
@@ -35,16 +34,6 @@ for (const producto of arrayCatalogo) {
     <li class="list-group-item">${producto.precio}</li>`
     document.body.appendChild (contenedor);
 }
-
-// Intento de insertar nuevos elementos li en ul
-// let padre = document.getElementsByClassName("list-group catalogo");
-
-// let productos = arrayCatalogo;
-// for (const producto of productos) {
-//     let li = document.createElement("li");
-//     li.innerHTML = producto
-//     padre.appendChild (li);
-// }
 
 
 
