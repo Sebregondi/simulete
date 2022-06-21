@@ -22,20 +22,31 @@ arrayCatalogo.push (new Libro ("Inquisiciones/Otras inquisiciones", 3799, "ensay
 arrayCatalogo.push (new Libro ("Historia de la eternidad", 2049, "cuentos", 11));
 arrayCatalogo.push (new Libro ("La rosa profunda", 1999, "poesia", 11));
 arrayCatalogo.push (new Libro ("La cifra", 1399, "poesia", 11));
-// console.log (arrayCatalogo);
+console.log (arrayCatalogo);
+
+// Intento de crear elementos desde objetos
+for (const producto of arrayCatalogo) {
+    let contenedor = document.createElement ("div");
+    contenedor.innerHTML = `<h5> Título: ${producto.titulo}</h5>
+    <p> Género: ${producto.genero}</p>
+    <b> $${producto.precio}</b>`;
+    document.body.appendChild (contenedor);
+}
+
+
 
 // FUNCIONES PARA ORDENAR
 // Ordenar precios de Menor a Mayor
 const deMenoraMayor = () => {
     arrayCatalogo.sort ( (a,b) => a.precio - b.precio);
-    console.log (arrayCatalogo);
+    // console.log (arrayCatalogo);
     mostrarListaOrdenada();    
 }
 
 // Ordenar precios de Mayor a Menor
 const deMayoraMenor = () => {
     arrayCatalogo.sort ( (a,b) => b.precio - a.precio);
-    console.log (arrayCatalogo);
+    // console.log (arrayCatalogo);
     mostrarListaOrdenada();   
 }
 
@@ -222,8 +233,6 @@ const comprarProductos = () => {
 }
 
 comprarProductos();
-
-
 
 
 
