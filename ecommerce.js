@@ -25,10 +25,19 @@ arrayCatalogo.push (new Libro ("La cifra", 1399, "poesia", 11));
 // console.log (arrayCatalogo);
 
 
-// CREACIÓN DE ELEMENTOS DE DOM A PARTIR DE ARRAY DE OBJETOS
+// // CREACIÓN DE ELEMENTOS DE DOM A PARTIR DE ARRAY DE OBJETOS
+// for (const producto of arrayCatalogo) {
+//     let contenedor = document.createElement ("div");
+//     contenedor.innerHTML = `<h5> Título: ${producto.titulo}</h5>
+//     <p> Género: ${producto.genero}</p>
+//     <b> $${producto.precio}</b>`;
+//     document.body.appendChild (contenedor);
+// }
+
+// MODIFICACIÓN DE ETIQUETA LI A PARTIR DE ARRAY DE OBJETOS
 for (const producto of arrayCatalogo) {
-    let contenedor = document.createElement ("div");
-    contenedor.innerHTML = `<h5> Título: ${producto.titulo}</h5>
+    let contenedor = document.querySelector (".list-group-item");
+    contenedor.innerHTML = `<h3> Título: ${producto.titulo}</h3>
     <p> Género: ${producto.genero}</p>
     <b> $${producto.precio}</b>`;
     document.body.appendChild (contenedor);
