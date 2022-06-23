@@ -36,7 +36,7 @@ arrayCatalogo.push (new Libro ("La cifra", 1399, "poesia", 11));
 
 // MODIFICACIÓN DE ETIQUETA LI A PARTIR DE ARRAY DE OBJETOS
 for (const producto of arrayCatalogo) {
-    let contenedor = document.querySelector (".list-group-item");
+    let contenedor = document.querySelector (".card-title");
     contenedor.innerHTML = `<h3> Título: ${producto.titulo}</h3>
     <p> Género: ${producto.genero}</p>
     <b> $${producto.precio}</b>`;
