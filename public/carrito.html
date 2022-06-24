@@ -8,206 +8,340 @@
     <link rel="stylesheet" href="carrito.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<!-- Link CSS de Bootstrap     -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
 </head>
 
-<section class="h-100 gradient-custom">
-    <div class="container py-5">
-        <div class="row d-flex justify-content-center my-4">
-            <div class="col-md-8">
-                <div class="card mb-4">
-                    <div class="card-header py-3">
-                        <h5 class="mb-0">Cart - 2 items</h5>
-                    </div>
-                    <div class="card-body">
-                        <!-- Single item -->
-                        <div class="row">
-                            <div class="col-lg-3 col-md-12 mb-4 mb-lg-0">
-                                <!-- Image -->
-                                <div class="bg-image hover-overlay hover-zoom ripple rounded"
-                                    data-mdb-ripple-color="light">
-                                    <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Vertical/12a.webp"
-                                        class="w-100" alt="Blue Jeans Jacket" />
-                                    <a href="#!">
-                                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.2)"></div>
-                                    </a>
-                                </div>
-                                <!-- Image -->
-                            </div>
+<main>
+    <section>
+        <div id="navbar">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <!-- Container wrapper -->
+                <div class="container-fluid">
+                    <!-- Toggle button -->
+                    <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+                        data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-bars"></i>
+                    </button>
 
-                            <div class="col-lg-5 col-md-6 mb-4 mb-lg-0">
-                                <!-- Data -->
-                                <p><strong>Blue denim shirt</strong></p>
-                                <p>Color: blue</p>
-                                <p>Size: M</p>
-                                <button type="button" class="btn btn-primary btn-sm me-1 mb-2" data-mdb-toggle="tooltip"
-                                    title="Remove item">
-                                    <i class="fas fa-trash"></i>
-                                </button>
-                                <button type="button" class="btn btn-danger btn-sm mb-2" data-mdb-toggle="tooltip"
-                                    title="Move to the wish list">
-                                    <i class="fas fa-heart"></i>
-                                </button>
-                                <!-- Data -->
-                            </div>
-
-                            <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
-                                <!-- Quantity -->
-                                <div class="d-flex mb-4" style="max-width: 300px">
-                                    <button class="btn btn-primary px-3 me-2"
-                                        onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
-                                        <i class="fas fa-minus"></i>
-                                    </button>
-
-                                    <div class="form-outline">
-                                        <input id="form1" min="0" name="quantity" value="1" type="number"
-                                            class="form-control" />
-                                        <label class="form-label" for="form1">Quantity</label>
-                                    </div>
-
-                                    <button class="btn btn-primary px-3 ms-2"
-                                        onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                                        <i class="fas fa-plus"></i>
-                                    </button>
-                                </div>
-                                <!-- Quantity -->
-
-                                <!-- Price -->
-                                <p class="text-start text-md-center">
-                                    <strong>$17.99</strong>
-                                </p>
-                                <!-- Price -->
-                            </div>
-                        </div>
-                        <!-- Single item -->
-
-                        <hr class="my-4" />
-
-                        <!-- Single item -->
-                        <div class="row">
-                            <div class="col-lg-3 col-md-12 mb-4 mb-lg-0">
-                                <!-- Image -->
-                                <div class="bg-image hover-overlay hover-zoom ripple rounded"
-                                    data-mdb-ripple-color="light">
-                                    <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Vertical/13a.webp"
-                                        class="w-100" />
-                                    <a href="#!">
-                                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.2)"></div>
-                                    </a>
-                                </div>
-                                <!-- Image -->
-                            </div>
-
-                            <div class="col-lg-5 col-md-6 mb-4 mb-lg-0">
-                                <!-- Data -->
-                                <p><strong>Red hoodie</strong></p>
-                                <p>Color: red</p>
-                                <p>Size: M</p>
-
-                                <button type="button" class="btn btn-primary btn-sm me-1 mb-2" data-mdb-toggle="tooltip"
-                                    title="Remove item">
-                                    <i class="fas fa-trash"></i>
-                                </button>
-                                <button type="button" class="btn btn-danger btn-sm mb-2" data-mdb-toggle="tooltip"
-                                    title="Move to the wish list">
-                                    <i class="fas fa-heart"></i>
-                                </button>
-                                <!-- Data -->
-                            </div>
-
-                            <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
-                                <!-- Quantity -->
-                                <div class="d-flex mb-4" style="max-width: 300px">
-                                    <button class="btn btn-primary px-3 me-2"
-                                        onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
-                                        <i class="fas fa-minus"></i>
-                                    </button>
-
-                                    <div class="form-outline">
-                                        <input id="form1" min="0" name="quantity" value="1" type="number"
-                                            class="form-control" />
-                                        <label class="form-label" for="form1">Quantity</label>
-                                    </div>
-
-                                    <button class="btn btn-primary px-3 ms-2"
-                                        onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                                        <i class="fas fa-plus"></i>
-                                    </button>
-                                </div>
-                                <!-- Quantity -->
-
-                                <!-- Price -->
-                                <p class="text-start text-md-center">
-                                    <strong>$17.99</strong>
-                                </p>
-                                <!-- Price -->
-                            </div>
-                        </div>
-                        <!-- Single item -->
-                    </div>
-                </div>
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <p><strong>Expected shipping delivery</strong></p>
-                        <p class="mb-0">12.10.2020 - 14.10.2020</p>
-                    </div>
-                </div>
-                <div class="card mb-4 mb-lg-0">
-                    <div class="card-body">
-                        <p><strong>We accept</strong></p>
-                        <img class="me-2" width="45px"
-                            src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/visa.svg"
-                            alt="Visa" />
-                        <img class="me-2" width="45px"
-                            src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/amex.svg"
-                            alt="American Express" />
-                        <img class="me-2" width="45px"
-                            src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/mastercard.svg"
-                            alt="Mastercard" />
-                        <img class="me-2" width="45px"
-                            src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce/includes/gateways/paypal/assets/images/paypal.webp"
-                            alt="PayPal acceptance mark" />
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <div class="card-header py-3">
-                        <h5 class="mb-0">Summary</h5>
-                    </div>
-                    <div class="card-body">
-                        <ul class="list-group list-group-flush">
-                            <li
-                                class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
-                                Products
-                                <span>$53.98</span>
+                    <!-- Collapsible wrapper -->
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <!-- Navbar brand -->
+                        <a class="navbar-brand mt-2 mt-lg-0" href="#">
+                            <img src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp" height="15"
+                                alt="MDB Logo" loading="lazy" />
+                        </a>
+                        <!-- Left links -->
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Dashboard</a>
                             </li>
-                            <li class="list-group-item d-flex justify-content-between align-items-center px-0">
-                                Shipping
-                                <span>Gratis</span>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Team</a>
                             </li>
-                            <li
-                                class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
-                                <div>
-                                    <strong>Total amount</strong>
-                                    <strong>
-                                        <p class="mb-0">(including VAT)</p>
-                                    </strong>
-                                </div>
-                                <span><strong>$53.98</strong></span>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Projects</a>
                             </li>
                         </ul>
+                        <!-- Left links -->
+                    </div>
+                    <!-- Collapsible wrapper -->
 
-                        <button type="button" class="btn btn-primary btn-lg btn-block">
-                            Go to checkout
-                        </button>
+                    <!-- Right elements -->
+                    <div class="d-flex align-items-center">
+                        <!-- Icon -->
+                        <a class="text-reset me-3" href="#">
+                            <i class="fas fa-shopping-cart"></i>
+                        </a>
+
+                        <!-- Notifications -->
+                        <div class="dropdown">
+                            <a class="text-reset me-3 dropdown-toggle hidden-arrow" href="#" id="navbarDropdownMenuLink"
+                                role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-bell"></i>
+                                <span class="badge rounded-pill badge-notification bg-danger">1</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                                <li>
+                                    <a class="dropdown-item" href="#">Some news</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Another news</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Avatar -->
+                        <div class="dropdown">
+                            <a class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#"
+                                id="navbarDropdownMenuAvatar" role="button" data-mdb-toggle="dropdown"
+                                aria-expanded="false">
+                                <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle"
+                                    height="25" alt="Black and White Portrait of a Man" loading="lazy" />
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
+                                <li>
+                                    <a class="dropdown-item" href="#">My profile</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Settings</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Logout</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Right elements -->
+                </div>
+                <!-- Container wrapper -->
+            </nav>
+            <!-- Navbar -->
+        </div>
+    </section>
+
+    <section class="h-100 gradient-custom">
+        <div class="container py-5">
+            <div class="row d-flex justify-content-center my-4">
+                <div class="col-md-8">
+                    <div class="card mb-4">
+                        <div class="card-header py-3">
+                            <h5 class="mb-0">Cart - 2 items</h5>
+                        </div>
+                        <div class="card-body">
+                            <!-- Single item -->
+                            <div class="row">
+                                <div class="col-lg-3 col-md-12 mb-4 mb-lg-0">
+                                    <!-- Image -->
+                                    <div class="bg-image hover-overlay hover-zoom ripple rounded"
+                                        data-mdb-ripple-color="light">
+                                        <img src="https://www.penguinlibros.com/ar/903779-home_default/el-aleph.jpg"
+                                            class="w-100" alt="Blue Jeans Jacket" />
+                                        <a href="#!">
+                                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.2)"></div>
+                                        </a>
+                                    </div>
+                                    <!-- Image -->
+                                </div>
+
+                                <div class="col-lg-5 col-md-6 mb-4 mb-lg-0">
+                                    <!-- Data -->
+                                    <p><strong>Blue denim shirt</strong></p>
+                                    <p>Color: blue</p>
+                                    <p>Size: M</p>
+                                    <button type="button" class="btn btn-primary btn-sm me-1 mb-2"
+                                        data-mdb-toggle="tooltip" title="Remove item">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-danger btn-sm mb-2" data-mdb-toggle="tooltip"
+                                        title="Move to the wish list">
+                                        <i class="fas fa-heart"></i>
+                                    </button>
+                                    <!-- Data -->
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                                    <!-- Quantity -->
+                                    <div class="d-flex mb-4" style="max-width: 300px">
+                                        <button class="btn btn-primary px-3 me-2"
+                                            onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+
+                                        <div class="form-outline">
+                                            <input id="form1" min="0" name="quantity" value="1" type="number"
+                                                class="form-control" />
+                                            <label class="form-label" for="form1">Quantity</label>
+                                        </div>
+
+                                        <button class="btn btn-primary px-3 ms-2"
+                                            onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                                            <i class="fas fa-plus"></i>
+                                        </button>
+                                    </div>
+                                    <!-- Quantity -->
+
+                                    <!-- Price -->
+                                    <p class="text-start text-md-center">
+                                        <strong>$17.99</strong>
+                                    </p>
+                                    <!-- Price -->
+                                </div>
+                            </div>
+                            <!-- Single item -->
+
+                            <hr class="my-4" />
+
+                            <!-- Single item -->
+                            <div class="row">
+                                <div class="col-lg-3 col-md-12 mb-4 mb-lg-0">
+                                    <!-- Image -->
+                                    <div class="bg-image hover-overlay hover-zoom ripple rounded"
+                                        data-mdb-ripple-color="light">
+                                        <img src="https://www.penguinlibros.com/ar/903778-large_default/ficciones.jpg"
+                                            class="w-100" />
+                                        <a href="#!">
+                                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.2)"></div>
+                                        </a>
+                                    </div>
+                                    <!-- Image -->
+                                </div>
+
+                                <div class="col-lg-5 col-md-6 mb-4 mb-lg-0">
+                                    <!-- Data -->
+                                    <p><strong>Red hoodie</strong></p>
+                                    <p>Color: red</p>
+                                    <p>Size: M</p>
+
+                                    <button type="button" class="btn btn-primary btn-sm me-1 mb-2"
+                                        data-mdb-toggle="tooltip" title="Remove item">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-danger btn-sm mb-2" data-mdb-toggle="tooltip"
+                                        title="Move to the wish list">
+                                        <i class="fas fa-heart"></i>
+                                    </button>
+                                    <!-- Data -->
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                                    <!-- Quantity -->
+                                    <div class="d-flex mb-4" style="max-width: 300px">
+                                        <button class="btn btn-primary px-3 me-2"
+                                            onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+
+                                        <div class="form-outline">
+                                            <input id="form1" min="0" name="quantity" value="1" type="number"
+                                                class="form-control" />
+                                            <label class="form-label" for="form1">Quantity</label>
+                                        </div>
+
+                                        <button class="btn btn-primary px-3 ms-2"
+                                            onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                                            <i class="fas fa-plus"></i>
+                                        </button>
+                                    </div>
+                                    <!-- Quantity -->
+
+                                    <!-- Price -->
+                                    <p class="text-start text-md-center">
+                                        <strong>$17.99</strong>
+                                    </p>
+                                    <!-- Price -->
+                                </div>
+                            </div>
+                            <!-- Single item -->
+                        </div>
+                    </div>
+                    
+                    <div class="card mb-4 mb-lg-0">
+                        <div class="card-body">
+                            <p><strong>Medios de pago</strong></p>
+                            <img class="me-2" width="45px"
+                                src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/visa.svg"
+                                alt="Visa" />
+                            <img class="me-2" width="45px"
+                                src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/amex.svg"
+                                alt="American Express" />
+                            <img class="me-2" width="45px"
+                                src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/mastercard.svg"
+                                alt="Mastercard" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-header py-3">
+                            <h5 class="mb-0">Summary</h5>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                <li
+                                    class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
+                                    Products
+                                    <span>$53.98</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                                    Shipping
+                                    <span>Gratis</span>
+                                </li>
+                                <li
+                                    class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
+                                    <div>
+                                        <strong>Total amount</strong>
+                                        <strong>
+                                            <p class="mb-0">(including VAT)</p>
+                                        </strong>
+                                    </div>
+                                    <span><strong>$53.98</strong></span>
+                                </li>
+                            </ul>
+
+                            <button type="button" class="btn btn-primary btn-lg btn-block">
+                                Go to checkout
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
+
+    <section id="footer">
+        <footer class="bg-light text-center text-white">
+            <!-- Grid container -->
+            <div class="container p-4 pb-0">
+                <!-- Section: Social media -->
+                <section class="mb-4">
+                    <!-- Facebook -->
+                    <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998;" href="#!"
+                        role="button"><i class="fab fa-facebook-f"></i></a>
+
+                    <!-- Twitter -->
+                    <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee;" href="#!"
+                        role="button"><i class="fab fa-twitter"></i></a>
+
+                    <!-- Google -->
+                    <a class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39;" href="#!"
+                        role="button"><i class="fab fa-google"></i></a>
+
+                    <!-- Instagram -->
+                    <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac;" href="#!"
+                        role="button"><i class="fab fa-instagram"></i></a>
+
+                    <!-- Linkedin -->
+                    <a class="btn btn-primary btn-floating m-1" style="background-color: #0082ca;" href="#!"
+                        role="button"><i class="fab fa-linkedin-in"></i></a>
+                    <!-- Github -->
+                    <a class="btn btn-primary btn-floating m-1" style="background-color: #333333;" href="#!"
+                        role="button"><i class="fab fa-github"></i></a>
+                </section>
+                <!-- Section: Social media -->
+            </div>
+            <!-- Grid container -->
+
+            <!-- Copyright -->
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                © 2020 Copyright:
+                <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+            </div>
+            <!-- Copyright -->
+        </footer>
+    </section>
+
+</main>
+
+<!-- Link para scripts de JS -->
 <script src="main.js"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
     crossorigin="anonymous"></script>
