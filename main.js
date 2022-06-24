@@ -35,20 +35,27 @@ arrayCatalogo.push (new Libro ("La cifra", 1399, "poesia", 11));
 // }
 
 // MODIFICACIÓN DE ETIQUETA LI A PARTIR DE ARRAY DE OBJETOS
-for (const producto of arrayCatalogo) {
-    let contenedor = document.querySelector (".card-title");
-    contenedor.innerHTML = `<h3> Título: ${producto.titulo}</h3>
-    <p> Género: ${producto.genero}</p>
-    <b> $${producto.precio}</b>`;
-    document.body.appendChild (contenedor);
-}
+// for (const producto of arrayCatalogo) {
+//     let contenedor = document.querySelector (".card-title");
+//     contenedor.innerHTML = `<h3> Título: ${producto.titulo}</h3>
+//     <p> Género: ${producto.genero}</p>
+//     <b> $${producto.precio}</b>`;
+//     document.body.appendChild (contenedor);
+// }
 
 // INTENTO DE EVENTO 1
-let boton = document.getElementById("botonazo")
+// let boton = document.getElementById("botonazo")
 
-boton.addEventListener("click", respuestaClick);
+// boton.addEventListener("click", respuestaClick);
 
-function respuestaClick() {
+// function respuestaClick() {
+//     alert ("Ud. agregó un item al carrito");
+// }
+
+// INTENTO DE EVENTO CON NODO
+let boton = document.getElementById("botonazo");
+
+boton.onclick = () => {
     alert ("Ud. agregó un item al carrito");
 }
 
