@@ -43,6 +43,15 @@ for (const producto of arrayCatalogo) {
     document.body.appendChild (contenedor);
 }
 
+// INTENTO DE EVENTO 1
+let boton = document.getElementById("botonazo")
+
+boton.addEventListener("click", respuestaClick);
+
+function respuestaClick() {
+    alert ("Ud. agregó un item al carrito");
+}
+
 // FUNCIONES PARA ORDENAR
 // Ordenar precios de Menor a Mayor
 const deMenoraMayor = () => {
@@ -241,6 +250,7 @@ const comprarProductos = () => {
 }
 
 comprarProductos();
+
 
 
 
