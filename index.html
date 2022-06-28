@@ -4,129 +4,142 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Evento</title>
-  <link rel="stylesheet" href="">
+  <title>Carrito</title>
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <!-- Link CSS de Bootstrap     -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link rel="stylesheet" href="carrito.css">
 </head>
 
 <body>
 
   <main>
+    <section>
+      <div id="navbar">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <!-- Container wrapper -->
+          <div class="container-fluid">
+            <!-- Toggle button -->
+            <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+              data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <i class="fas fa-bars"></i>
+            </button>
 
-    <!-- CARD 1 - EL ALEPH -->
+            <!-- Collapsible wrapper -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <!-- Navbar brand -->
+              <a class="navbar-brand mt-2 mt-lg-0" href="#">
+                <img src="https://www.nicepng.com/png/detail/793-7936442_book-logo-png-books-logo-black-png.png"
+                  height="15" alt="Book icon" loading="lazy" />
+              </a>
+              <!-- Left links -->
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Productos</a>
+                </li>
+              </ul>
+              <!-- Left links -->
+            </div>
+            <!-- Collapsible wrapper -->
 
-    <div class="container-fluid bg-trasparent my-4 p-3" style="position: relative;">
-      <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3">
-        <div class="col">
-          <div class="card h-100 shadow-sm"> <img
-              src="https://www.penguinlibros.com/ar/903779-home_default/el-aleph.jpg" class="card-img-top"
-              alt="Portada de El aleph">
-            <div class="card-body">
-              <div class="clearfix mb-3"> <span class="float-start badge rounded-pill bg-primary">Género</span> <span
-                  class="float-end price-hp">Precio</span> </div>
-              <h5 class="card-title">Título, Autor, Pags.</h5>
-              <div class="text-center my-4"> <a href="#" id="botonazo" class="btn btn-warning">Agregar al carrito</a>
+            <!-- Right elements -->
+            <div class="d-flex align-items-center">
+              <!-- Icon -->
+              <a class="text-reset me-3" href="#">
+                <i class="fas fa-shopping-cart"></i>
+              </a>
+
+              <!-- Notifications -->
+              <div class="dropdown">
+                <a class="text-reset me-3 dropdown-toggle hidden-arrow" href="#" id="navbarDropdownMenuLink"
+                  role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                  <i class="fas fa-bell"></i>
+                  <span class="badge rounded-pill badge-notification bg-danger">1</span>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                  <li>
+                    <a class="dropdown-item" href="#">Some news</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Another news</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                </ul>
               </div>
             </div>
-          </div>
+            <!-- Container wrapper -->
+        </nav>
+      </div>
+    </section>
+    <!-- Fin de Navbar -->
+
+    <div id="catalogo">
+      <ul id="lista">
+
+      </ul>
+    </div>
+
+    <section id="footer">
+      <footer class="bg-light text-center text-white">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+          <!-- Section: Social media -->
+          <section class="mb-4">
+            <!-- Facebook -->
+            <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998;" href="#!" role="button"><i
+                class="fab fa-facebook-f"></i></a>
+
+            <!-- Twitter -->
+            <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee;" href="#!" role="button"><i
+                class="fab fa-twitter"></i></a>
+
+            <!-- Google -->
+            <a class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39;" href="#!" role="button"><i
+                class="fab fa-google"></i></a>
+
+            <!-- Instagram -->
+            <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac;" href="#!" role="button"><i
+                class="fab fa-instagram"></i></a>
+
+            <!-- Linkedin -->
+            <a class="btn btn-primary btn-floating m-1" style="background-color: #0082ca;" href="#!" role="button"><i
+                class="fab fa-linkedin-in"></i></a>
+            <!-- Github -->
+            <a class="btn btn-primary btn-floating m-1" style="background-color: #333333;" href="#!" role="button"><i
+                class="fab fa-github"></i></a>
+          </section>
+          <!-- Section: Social media -->
         </div>
+        <!-- Grid container -->
 
-        <!-- CARD 2 - FICCIONES
-        <div class="container-fluid bg-trasparent my-4 p-3" style="position: relative;">
-          <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3">
-            <div class="col">
-              <div class="card h-100 shadow-sm"> <img
-                  src="https://www.penguinlibros.com/ar/903778-thickbox_default/ficciones.jpg" class="card-img-top"
-                  alt="Portada de Ficciones">
-                <div class="card-body">
-                  <div class="clearfix mb-3"> <span class="float-start badge rounded-pill bg-primary">Género</span>
-                    <span class="float-end price-hp">Precio</span> </div>
-                  <h5 class="card-title">Título, Autor, Pags.</h5>
-                  <div class="text-center my-4"> <a href="#" id="botonazo" class="btn btn-warning">Agregar al
-                      carrito</a></div>
-                </div>
-              </div>
-            </div>
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          © 2020 Copyright:
+          <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
+    </section>
 
-            CARD 3 - HISTORIA DE LA ETERNIDAD
-            <div class="container-fluid bg-trasparent my-4 p-3" style="position: relative;">
-              <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3">
-                <div class="col">
-                  <div class="card h-100 shadow-sm"> <img
-                      src="https://www.penguinlibros.com/ar/904356-thickbox_default/historia-de-la-eternidad.jpg" class="card-img-top"
-                      alt="Portada de Historia de la eternidad">
-                    <div class="card-body">
-                      <div class="clearfix mb-3"> <span class="float-start badge rounded-pill bg-primary">Género</span>
-                        <span class="float-end price-hp">Precio</span> </div>
-                      <h5 class="card-title">Título, Autor, Pags.</h5>
-                      <div class="text-center my-4"> <a href="#" id="botonazo" class="btn btn-warning">Agregar al
-                          carrito</a></div>
-                    </div>
-                  </div>
-                </div>
+  </main>
 
-                CARD 4 - INQUISICIONES
-                <div class="container-fluid bg-trasparent my-4 p-3" style="position: relative;">
-                  <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3">
-                    <div class="col">
-                      <div class="card h-100 shadow-sm"> <img
-                          src="https://www.penguinlibros.com/ar/904160-thickbox_default/inquisiciones-otras-inquisiciones.jpg" class="card-img-top"
-                          alt="Portada de Inquisiciones/Otras inquisiciones">
-                        <div class="card-body">
-                          <div class="clearfix mb-3"> <span
-                              class="float-start badge rounded-pill bg-primary">Género</span> <span
-                              class="float-end price-hp">Precio</span> </div>
-                          <h5 class="card-title">Título, Autor, Pags.</h5>
-                          <div class="text-center my-4"> <a href="#" id="botonazo" class="btn btn-warning">Agregar al
-                              carrito</a></div>
-                        </div>
-                      </div>
-                    </div>
-
-                    CARD 5 - LA CIFRA
-                    <div class="container-fluid bg-trasparent my-4 p-3" style="position: relative;">
-                      <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3">
-                        <div class="col">
-                          <div class="card h-100 shadow-sm"> <img
-                              src="https://www.penguinlibros.com/ar/904417-thickbox_default/la-cifra.jpg"
-                              class="card-img-top" alt="Portada de La cifra">
-                            <div class="card-body">
-                              <div class="clearfix mb-3"> <span
-                                  class="float-start badge rounded-pill bg-primary">Género</span> <span
-                                  class="float-end price-hp">Precio</span> </div>
-                              <h5 class="card-title">Título, Autor, Pags.</h5>
-                              <div class="text-center my-4"> <a href="#" id="botonazo" class="btn btn-warning">Agregar
-                                  al carrito</a></div>
-                            </div>
-                          </div>
-                        </div>
-
-                        CARD 6 - LA ROSA PROFUNDA
-                        <div class="container-fluid bg-trasparent my-4 p-3" style="position: relative;">
-                          <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3">
-                            <div class="col">
-                              <div class="card h-100 shadow-sm"> <img
-                                  src="https://www.penguinlibros.com/ar/904277-thickbox_default/la-rosa-profunda.jpg"
-                                  class="card-img-top" alt="Portada de La rosa profunda">
-                                <div class="card-body">
-                                  <div class="clearfix mb-3"> <span
-                                      class="float-start badge rounded-pill bg-primary">Género</span> <span
-                                      class="float-end price-hp">Precio</span> </div>
-                                  <h5 class="card-title">Título, Autor, Pags.</h5>
-                                  <div class="text-center my-4"> <a href="#" id="botonazo"
-                                      class="btn btn-warning">Agregar al carrito</a></div>
-                                </div>
-                              </div>
-                            </div>-->
-
-      </main> 
-
-                            <script src="main.js"></script>
-                            <script
-                              src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-                              integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-                              crossorigin="anonymous"></script>
+  <script src="main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
